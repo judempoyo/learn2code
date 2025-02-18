@@ -1,0 +1,278 @@
+
+  {
+    "algorithms": [
+      {
+        "title": "Parité d'un nombre",
+        "description": "Cet algorithme détermine si un nombre donné est pair ou impair.",
+        "answer": "Algorithme Parite(nombre)\n    Si nombre MOD 2 = 0 Alors\n        Afficher \"Le nombre est pair\"\n    Sinon\n        Afficher \"Le nombre est impair\"\n    Fin Si\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Compteur de nombres positifs",
+        "description": "Cet algorithme parcourt une liste de nombres et compte combien d'entre eux sont positifs.",
+        "answer": "Algorithme ComptePositifs(liste)\n    compteur <- 0\n    Pour chaque nombre dans liste Faire\n        Si nombre > 0 Alors\n            compteur <- compteur + 1\n        Fin Si\n    Fin Pour\n    Afficher \"Nombre de positifs : \", compteur\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Affichage des multiples de 3 jusqu'à N",
+        "description": "Cet algorithme affiche tous les multiples de 3 jusqu'à un nombre N donné.",
+        "answer": "Algorithme MultiplesDeTrois(N)\n    Pour i allant de 1 à N Faire\n        Si i MOD 3 = 0 Alors\n            Afficher i\n        Fin Si\n    Fin Pour\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Somme des entiers de 1 à N",
+        "description": "Cet algorithme calcule la somme des entiers de 1 à N.",
+        "answer": "Algorithme SommeEntiers(N)\n    somme <- 0\n    Pour i allant de 1 à N Faire\n        somme <- somme + i\n    Fin Pour\n    Afficher \"Somme : \", somme\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Calcul du produit des entiers de 1 à N",
+        "description": "Cet algorithme calcule le produit des entiers de 1 à N.",
+        "answer": "Algorithme ProduitEntiers(N)\n    produit <- 1\n    Pour i allant de 1 à N Faire\n        produit <- produit * i\n    Fin Pour\n    Afficher \"Produit : \", produit\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Recherche d'un élément dans un tableau",
+        "description": "Cet algorithme parcourt un tableau pour vérifier si un élément spécifique y est présent.",
+        "answer": "Algorithme RechercheElement(tableau, element)\n    trouve <- Faux\n    Pour chaque elem dans tableau Faire\n        Si elem = element Alors\n            trouve <- Vrai\n            Sortir de la boucle\n        Fin Si\n    Fin Pour\n    Si trouve Alors\n        Afficher \"Élément trouvé\"\n    Sinon\n        Afficher \"Élément non trouvé\"\n    Fin Si\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Compter les voyelles dans une chaîne",
+        "description": "Cet algorithme compte le nombre de voyelles dans une chaîne de caractères donnée.",
+        "answer": "Algorithme CompteVoyelles(chaine)\n    compteur <- 0\n    Pour chaque caractere dans chaine Faire\n        Si caractere = 'a' ou caractere = 'e' ou caractere = 'i' ou caractere = 'o' ou caractere = 'u' Alors\n            compteur <- compteur + 1\n        Fin Si\n    Fin Pour\n    Afficher \"Nombre de voyelles : \", compteur\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Affichage des nombres de Fibonacci jusqu'à N",
+        "description": "Cet algorithme affiche la suite de Fibonacci jusqu'à un nombre N donné.",
+        "answer": "Algorithme Fibonacci(N)\n    a <- 0\n    b <- 1\n    Afficher a // Affiche le premier nombre de Fibonacci\n\n    Tant que a <= N Faire\n        c <- a + b\n        a <- b\n        b <- c\n        Si a <= N Alors\n            Afficher a // Affiche le prochain nombre de Fibonacci\n        Fin Si\n    Fin Tant que\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Calcul de la factorielle",
+        "description": "La factorielle d'un nombre entier positif n (notée n!) est le produit de tous les entiers positifs inférieurs ou égaux à n. Par convention, la factorielle de 0 est 1.",
+        "answer": "Algorithme Factorielle(n)\n    Si n = 0 Alors\n        Retourner 1\n    Sinon\n        factorielle <- 1\n        Pour i allant de 1 à n Faire\n            factorielle <- factorielle * i\n        Fin Pour\n        Retourner factorielle\n    Fin Si\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Équation du second degré",
+        "description": "Une équation du second degré a la forme ax² + bx + c = 0. Pour résoudre cette équation, on utilise la formule quadratique.",
+        "answer": "Algorithme EquationSecondDegre(a, b, c)\n    discriminant <- b^2 - 4 * a * c\n\n    Si discriminant > 0 Alors\n        x1 <- (-b + Racine(discriminant)) / (2 * a)\n        x2 <- (-b - Racine(discriminant)) / (2 * a)\n        Afficher \"Deux solutions : \", x1, \" et \", x2\n    Sinon Si discriminant = 0 Alors\n        x <- -b / (2 * a)\n        Afficher \"Une solution : \", x\n    Sinon\n        Afficher \"Pas de solution réelle\"\n    Fin Si\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Déterminant d'une matrice 3x3",
+        "description": "Le déterminant d'une matrice 3x3 peut être calculé à l'aide de la règle de Sarrus.",
+        "answer": "Algorithme DeterminantMatrice3x3(A)\n    a <- A[0][0]\n    b <- A[0][1]\n    c <- A[0][2]\n    d <- A[1][0]\n    e <- A[1][1]\n    f <- A[1][2]\n    g <- A[2][0]\n    h <- A[2][1]\n    i <- A[2][2]\n\n    det <- a*(e*i - f*h) - b*(d*i - f*g) + c*(d*h - e*g)\n    Retourner det\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Somme des éléments d'un tableau",
+        "description": "Cet algorithme parcourt un tableau et calcule la somme de tous ses éléments.",
+        "answer": "Algorithme SommeTableau(tableau)\n    somme <- 0\n    Pour chaque element dans tableau Faire\n        somme <- somme + element\n    Fin Pour\n    Retourner somme\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Recherche du maximum dans un tableau",
+        "description": "Cet algorithme recherche l'élément maximum dans un tableau donné.",
+        "answer": "Algorithme MaximumTableau(tableau)\n    max <- tableau[0]\n    Pour chaque element dans tableau Faire\n        Si element > max Alors\n            max <- element\n        Fin Si\n    Fin Pour\n    Retourner max\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Inversion d'un tableau",
+        "description": "Cet algorithme inverse l'ordre des éléments d 'un tableau.",
+        "answer": "Algorithme InverserTableau(tableau)\n    debut <- 0\n    fin <- Taille(tableau) - 1\n\n    Tant que debut < fin Faire\n        // Échanger les éléments\n        temp <- tableau[debut]\n        tableau[debut] <- tableau[fin]\n        tableau[fin] <- temp\n\n        debut <- debut + 1\n        fin <- fin - 1\n    Fin Tant que\n\n    Retourner tableau\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Affichage des nombres pairs dans un tableau",
+        "description": "Cet algorithme parcourt un tableau et affiche tous les nombres pairs qu'il contient.",
+        "answer": "Algorithme AfficherPairs(tableau)\n    Pour chaque element dans tableau Faire\n        Si element MOD 2 = 0 Alors\n            Afficher element\n        Fin Si\n    Fin Pour\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Tri à bulles",
+        "description": "Le tri à bulles est un algorithme de tri simple qui fonctionne en répétant le passage à travers la liste, en comparant chaque paire d’éléments adjacents et en les échangeant s’ils sont dans le mauvais ordre.",
+        "answer": "Algorithme TriABulles(liste)\n    n <- Taille(liste)\n    Pour i allant de 0 à n-1 Faire\n        echangé <- Faux\n        Pour j allant de 0 à n-i-2 Faire\n            Si liste[j] > liste[j+1] Alors\n                // Échanger les éléments\n                temp <- liste[j]\n                liste[j] <- liste[j+1]\n                liste[j+1] <- temp\n                echangé <- Vrai\n            Fin Si\n        Fin Pour\n        Si non echangé Alors\n            Sortir // La liste est déjà triée\n        Fin Si\n    Fin Pour\n    Retourner liste\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Recherche binaire",
+        "description": "La recherche binaire est un algorithme efficace pour trouver un élément dans une liste triée.",
+        "answer": "Algorithme RechercheBinaire(liste, valeur)\n    debut <- 0\n    fin <- Taille(liste) - 1\n\n    Tant que debut <= fin Faire\n        milieu <- (debut + fin) // 2\n\n        Si liste[milieu] = valeur Alors\n            Retourner milieu // L'élément a été trouvé\n        Sinon Si liste[milieu] < valeur Alors\n            debut <- milieu + 1\n        Sinon\n            fin <- milieu - 1\n        Fin Si\n    Fin Tant que\n\n    Retourner -1 // L'élément n'a pas été trouvé\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Algorithme de Dijkstra",
+        "description": "L'algorithme de Dijkstra est utilisé pour trouver le chemin le plus court entre deux nœuds dans un graphe pondéré.",
+        "answer": "Algorithme Dijkstra(graphe, source)\n    distances <- Dictionnaire() // Stocke les distances minimales\n    pour chaque nœud dans graphe Faire\n        distances[nœud] <- Infini // Initialiser toutes les distances à l'infini\n    distances[source] <- 0\n\n    file_priorite <- NouvelleFilePriorite() // File de priorité pour gérer les nœuds à explorer\n    Ajouter(file_priorite, source, 0)\n\n    Tant que file_priorite n'est pas vide Faire\n        current_nœud <- ExtraireMin(file_priorite)\n\n        Pour chaque voisin dans graphe[current_nœud] Faire\n            distance_tentative <- distances[current_nœud] + poids(current_nœud, voisin)\n\n            Si distance_tentative < distances[voisin] Alors\n                distances[voisin] <- distance_tentative\n                Ajouter(file_priorite, voisin, distance_tentative)\n            Fin Si\n        Fin Pour\n    Fin Tant que\n\n    Retourner distances // Retourne les distances minimales depuis la source\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Algorithme de Floyd-Warshall",
+        "description": "L'algorithme de Floyd-Warshall est utilisé pour trouver les plus courts chemins entre toutes les paires de nœuds dans un graphe.",
+        "answer": "Algorithme FloydWarshall(graphe)\n    n <- Taille(graphe)\n    dist <- Matrice(n, n) // Matrice des distances\n\n    Pour i allant de 0 à n-1 Faire\n        Pour j allant de 0 à n-1 Faire\n            Si i = j Alors\n                dist[i][j] <- 0 // Distance de chaque nœud à lui-même est 0\n            Sinon Si (i, j) dans graphe Alors\n                dist[i][j] <- poids(i, j) // Initialiser avec le poids des arêtes\n            Sinon\n                dist[i][j] <- Infini // Pas de chemin initialement connu\n            Fin Si\n        Fin Pour\n    Fin Pour\n\n    Pour k allant de 0 à n-1 Faire\n        Pour i allant de 0 à n-1 Faire\n            Pour j allant de 0 à n-1 Faire\n                Si dist[i][j] > dist[i][k] + dist[k][j] Alors\n                    dist[i][j] <- dist[i][k] + dist[k][j] // Mise à jour si un chemin plus court est trouvé\n                Fin Si\n            Fin Pour\n        Fin Pour\n    Fin Pour\n\n    Retourner dist // Retourne la matrice des distances minimales entre toutes les paires de nœuds\nFin Algorithme",
+        "isRead": 0
+      },
+      {
+        "title": "Recherche linéaire",
+        "description": "La recherche linéaire est l'un des algorithmes les plus simples pour trouver un élément dans une liste non triée.",
+        "answer": "Algorithme RechercheLineaire(liste, valeur)\n    Pour chaque index allant de 0 à Taille(liste) - 1 Faire\n        Si liste[index] = valeur Alors\n            Retourner index // L'élément a été trouvé\n        Fin Si\n    Fin Pour\n\n    Retourner -1 // L'élément n'a pas été trouvé\nFin Algorithme",
+        "isRead": 0
+      }
+    ],
+ 
+  
+  "tips": [
+    {
+      "title": "Écrivez un Code Propre",
+      "description":
+          "Écrire un code propre est essentiel pour la maintenabilité et la lisibilité. Utilisez des noms de variables significatifs, gardez les fonctions courtes et suivez un formatage cohérent."
+    },
+    {
+      "title": "Utilisez le Contrôle de Version",
+      "description":
+          "Les systèmes de contrôle de version comme Git vous aident à suivre les modifications, à collaborer avec d'autres et à revenir à des versions précédentes de votre code si nécessaire."
+    },
+    {
+      "title": "Documentez Votre Code",
+      "description":
+          "Une bonne documentation aide les autres (et votre futur vous) à comprendre votre code. Utilisez des commentaires et des fichiers README pour expliquer votre logique et votre utilisation."
+    },
+    {
+      "title": "Pratiquez Régulièrement",
+      "description":
+          "Une pratique constante est la clé pour améliorer vos compétences en programmation. Réservez du temps chaque semaine pour travailler sur des projets, résoudre des problèmes ou apprendre de nouvelles technologies."
+    },
+    {
+      "title": "Apprenez à Déboguer",
+      "description":
+          "Le débogage est une compétence essentielle pour les développeurs. Apprenez à utiliser des outils et des techniques de débogage pour identifier et corriger efficacement les problèmes dans votre code."
+    },
+    {
+      "title": "Restez à Jour avec la Technologie",
+      "description":
+          "Le monde de la technologie évolue constamment. Suivez des blogs, des podcasts et des cours en ligne pour rester informé des dernières tendances et technologies."
+    },
+    {
+      "title": "Écrivez des Tests Unitaires",
+      "description":
+          "Les tests unitaires aident à garantir que votre code fonctionne comme prévu. Écrire des tests peut vous faire gagner du temps à long terme en détectant les bogues tôt dans le processus de développement."
+    },
+    {
+      "title": "Apprenez les Modèles de Conception",
+      "description":
+          "Familiarisez-vous avec les modèles de conception courants. Ils fournissent des solutions éprouvées à des problèmes communs et peuvent vous aider à écrire un code plus efficace et maintenable."
+    },
+    {
+      "title": "Collaborez avec d\"Autres",
+      "description":
+          "Travailler avec d\"autres développeurs peut offrir de nouvelles perspectives et idées. Participez à des revues de code, à la programmation en binôme ou à des projets open-source."
+    },
+    {
+      "title": "Prenez des Pauses et Évitez le Burnout",
+      "description":
+          "Des pauses régulières peuvent améliorer la productivité et la créativité. Assurez-vous de prendre du temps pour vous ressourcer et éviter le burnout."
+    }
+  ],
+  "project_ideas": [
+    {
+      "title": "Application de gestion de tâches",
+      "description": "Une application pour aider les utilisateurs à gérer leurs tâches quotidiennes.",
+      "imageUrl": "assets/images/task_manager.png"
+    },
+    {
+      "title": "Site de recettes",
+      "description": "Un site web où les utilisateurs peuvent partager et découvrir des recettes.",
+      "imageUrl": "assets/images/recipe_site.png"
+    },
+    {
+      "title": "Jeu de quiz",
+      "description": "Un jeu de quiz interactif sur divers sujets.",
+      "imageUrl": "assets/images/quiz_game.png"
+    }
+  ],
+  "quizzes": [
+    {
+      "title": "Quiz sur les langages de programmation",
+      "language": "English",
+      "difficulty": "Medium",
+      "category": "Programming",
+      "questions": "[{\"question\": \" Quel langage est principalement utilisé pour le développement web?\", \"options\": [\"Python\", \"JavaScript\", \"Java\", \"C#\"], \"answer\": \"JavaScript\"}]"
+    },
+    {
+      "title": "Quiz sur les bases de données",
+      "language": "French",
+      "difficulty": "Easy",
+      "category": "Databases",
+      "questions": "[{\"question\": \"Quel est le langage utilisé pour interroger les bases de données?\", \"options\": [\"SQL\", \"HTML\", \"CSS\", \"Java\"], \"answer\": \"SQL\"}]"
+    },
+    {
+      "title": "Quiz sur le développement mobile",
+      "language": "English",
+      "difficulty": "Hard",
+      "category": "Mobile Development",
+      "questions": "[{\"question\": \"Quel framework est utilisé pour développer des applications Android?\", \"options\": [\"Flutter\", \"Django\", \"React\", \"Ruby on Rails\"], \"answer\": \"Flutter\"}]"
+    }
+  ],
+  
+  "careers" : [
+    {
+      "title": "Développeur Web",
+      "description": "Responsable de la création et de la maintenance de sites web.",
+      "skills": "HTML, CSS, JavaScript, PHP",
+      "salary": "45,000 - 75,000 USD par an",
+      "jobOutlook": "Croissance rapide, surtout dans le développement mobile."
+    },
+    {
+      "title": "Data Scientist",
+      "description": "Analyse des données pour aider à la prise de décision.",
+      "skills": "Python, R, SQL, Machine Learning",
+      "salary": "80,000 - 120,000 USD par an",
+      "jobOutlook": "Demande croissante dans divers secteurs."
+    },
+    {
+      "title": "Ingénieur Logiciel",
+      "description": "Conception et développement de logiciels.",
+      "skills": "Java, C++, Agile, DevOps",
+      "salary": "70,000 - 110,000 USD par an",
+      "jobOutlook": "Stable avec de nombreuses opportunités."
+    }
+  ],
+  "programming_languages": [
+    {
+      "title": "Python",
+      "icon": "assets/icons/python.png",
+      "description": "Langage de programmation polyvalent et facile à apprendre.",
+      "history": "Créé par Guido van Rossum et publié pour la première fois en 1991.",
+      "advantages": "Facile à lire, large communauté, nombreuses bibliothèques.",
+      "disadvantages": "Pas le plus rapide, pas idéal pour les applications mobiles.",
+      "domains": "Web, Data Science, IA, Automatisation",
+      "frameworks": "Django, Flask",
+      "codeExample": "print(\"Hello, World!\")"
+    },
+    {
+      "title": "JavaScript",
+      "icon": "assets/icons/javascript.png",
+      "description": "Langage de script principalement utilisé pour le développement web.",
+      "history": "Créé par Brendan Eich en 1995.",
+      "advantages": "Exécution côté client, large adoption, riche écosystème.",
+      "disadvantages": "Problèmes de compatibilité entre navigateurs, sécurité.",
+      "domains": "Web, Mobile, Serveur",
+      "frameworks": "React, Angular, Vue",
+      "codeExample": "console.log(\"Hello, World!\");"
+    },
+    {
+      "title": "Java",
+      "icon": "assets/icons/java.png",
+      "description": "Langage de programmation orienté objet utilisé dans de nombreuses applications.",
+      "history": "Développé par Sun Microsystems et publié en 1995.",
+      "advantages": "Portabilité, sécurité, large communauté.",
+      "disadvantages": "Consommation de mémoire, complexité.",
+      "domains": "Web, Mobile, Entreprise",
+      "frameworks": "Spring, Hibernate",
+      "codeExample": "System.out.println(\"Hello, World!\");"
+    }
+  ]
+}
