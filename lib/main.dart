@@ -20,7 +20,7 @@ void main() async {
   final dbHelper = DatabaseHelper();
   //dbHelper.supprimerBaseDeDonnees();
   await dbHelper.insertDefaultData();
-  // Initialize your app or settings provider here
+
   await initializeApp();
 
   runApp(
@@ -34,7 +34,6 @@ void main() async {
 }
 
 Future<void> initializeApp() async {
-  // Initialize your settings provider or any other services here
   await SettingsProvider().init();
 }
 
@@ -67,8 +66,8 @@ class _MyAppState extends State<MyApp> {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: [
-            const Locale('en', ''), // Anglais
-            const Locale('fr', ''), // Français
+            const Locale('en', ''),
+            const Locale('fr', ''), 
           ],
           locale: Locale(settingsProvider.selectedLanguage, ''),
           home: HomeScreen(),
